@@ -13,18 +13,19 @@ pipeline{
         stage('Build'){
             steps{
                 echo "Build"
-				sh "mvn --version"
+                sh "mvn --version"
             }
         }
         stage('Test'){
             steps{
                 echo "Test"
-            }
-        }
-		post{
-			success{
-				echo "Pipeline runs successfully"
+                post{
+			        success{
+				    echo "Pipeline runs successfully"
 			}
 		}
+            }
+        }
+		
     }
 }
