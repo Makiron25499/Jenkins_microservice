@@ -16,14 +16,9 @@ pipeline{
                 sh "mvn --version"
             }
         }
-        stage('Test'){
+        stage('Integration Test'){
             steps{
-                echo "Test"
-                post{
-			        success{
-				    echo "Pipeline runs successfully"
-			}
-		}
+                echo "Integration Test"
             }
         }
 		
