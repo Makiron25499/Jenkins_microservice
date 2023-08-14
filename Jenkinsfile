@@ -31,7 +31,7 @@ pipeline{
                 }
             }
         }
-        stage('Push Docker Image'){
+        /*stage('Push Docker Image'){
             steps{
                 script{
                     docker.withRegistry('','dockerhub'){
@@ -39,6 +39,6 @@ pipeline{
                     }
                 }
             }
-        }
+        }*/
     }
 }
