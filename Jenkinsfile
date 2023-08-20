@@ -27,7 +27,7 @@ pipeline{
         stage('Build Docker Image'){
             steps{
                 script{
-                    docImage=Docker.Build("makiron/jenkins:${env.BUILD_TAG}")
+                    docImage=docker.build("makiron/jenkins:${env.BUILD_TAG}")
                     echo "Build Success"
                 }
             }
